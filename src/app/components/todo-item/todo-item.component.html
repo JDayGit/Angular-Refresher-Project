@@ -1,0 +1,11 @@
+<div [ngClass]="setClasses()">
+  <p>
+      <input (change)="onToggle(todo)" type="checkbox" />
+      {{ todo. title }}
+      <!-- We click the delete button which sends off an event in the TodoItem component.
+           However, we are emitting up 'deleteTodo()' as '@Output()'.
+           We then CATCh 'deleteTodo() in 'todos.component.html and setting it to 'deleteTodo' in the Todos component.
+           Finally, we run deleteTodo() in the 'todos.component.ts'. -->
+      <button (click)="onDelete(todo)" class="del">x</button>
+  </p>
+</div>
